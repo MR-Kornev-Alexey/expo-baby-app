@@ -1,74 +1,78 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
+import {Image, StyleSheet, View, Dimensions} from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import {ThemedText} from '@/components/ThemedText';
+import {ThemedView} from '@/components/ThemedView';
+import {useTranslation} from 'react-i18next';
+import {Colors} from '@/constants/Colors';
+import {gStyle, images} from '@/constants';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+    const {t, i18n}: any = useTranslation();
+
+    return (
+        <ParallaxScrollView
+            headerBackgroundColor={{light: "#e0e0e0", dark: '#01251e'}}
+            headerFixedBackground={
+                <Image
+                    source={require('../../assets/images/content/new-main.png')}
+                    style={styles.fixedBackgroundImage}
+                    resizeMode="cover"
+                />
+            }
+            headerImage={
+                <View style={styles.headerImageContainer}>
+                    <Image
+                        source={require('../../assets/images/content/new-main.png')}
+                        style={styles.reactLogo}
+                    />
+                </View>
+            }
+            headerText={t('')}
+        >
+            <ThemedView style={styles.textContainer}>
+                {[...Array(7)].map((_, index) => (
+                    <ThemedText key={index} type="subtitle">
+                        &nbsp;&nbsp;&nbsp;&nbsp;{t(`intro${index + 1}`)}
+                    </ThemedText>
+                ))}
+                <ThemedText type="subtitle">
+                    &nbsp;&nbsp;&nbsp;&nbsp; {t('elena')}
+                </ThemedText>
+                <ThemedView style={gStyle.flexCenter}>
+                    <Image source={images.elenaImg} style={gStyle.imgHome}/>
+                </ThemedView>
+                <SocialLinks/>
+            </ThemedView>
+        </ParallaxScrollView>
+    );
 }
 
+const {width, height} = Dimensions.get('window');
+
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+    headerImageContainer: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: -1, // Устанавливаем zIndex, чтобы картинка была на заднем плане
+    },
+    fixedBackgroundImage: {
+        width,
+        height: height / 2, // Устанавливаем высоту половины экрана
+        position: 'absolute',
+    },
+    reactLogo: {
+        alignSelf: 'center',
+        width: '100%',
+        maxHeight: 600,
+        height: 400,
+
+    },
+    textContainer: {
+        width: '100%',
+        flex: 1,
+        padding: 12
+    }
 });

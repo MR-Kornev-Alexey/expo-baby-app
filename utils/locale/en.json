@@ -1,0 +1,497 @@
+{
+  "home": {
+    "mainTitle": "Comprehensive Child Development Assessment"
+  },
+  "tab": {
+    "main": "Main",
+    "who": "WHO test",
+    "psycho":  "N&Ph test",
+    "simple": "Quick test",
+    "more":   "More"
+  },
+  "american": {
+    "title": "WHO assessment"
+  },
+  "more": {
+    "choice": "Choose language",
+    "title": "Select language and restart APP",
+    "btn": "Select",
+    "additionally": "Additionally",
+    "agreement": "Terms and conditions",
+    "resources": "Resources Used",
+    "contacts": "Contacts",
+    "requisites": "Company details",
+     "version": "Version",
+    "language": {
+      "de": "German",
+      "ru": "Russian",
+      "en": "English"
+    }
+  },
+  "language_en": "English",
+  "language_ru": "Russian",
+  "language_de": "German",
+  "theme_switch": "Switch Theme",
+  "language_switch": "Language Switch",
+  "switch_to_dark": "Switch to dark",
+  "switch_to_light": "Switch to light",
+  "elena": "Best regards, your Elena",
+  "intro1": "Mothers around the world often worry that their baby’s height or weight seems 'incorrect.' However, not all children can meet ideal parameters. Reasons? Differences in parent heights, genetics, and individual growth rates of each child.",
+  "intro2": "To this day, many rely on outdated table values from the last century. However, these values were based on the growth patterns of children from one specific region. They were averaged out and made into a universal standard, which doesn't always reflect reality.",
+  "intro3": "Modern living conditions, changes in nutrition, and lifestyle have led to humanity becoming slightly taller and heavier. These natural changes have also affected the height and weight parameters of children.",
+  "intro4": "The app presents several different algorithms for assessing a baby’s height and weight. They include not only modern tables and methods but also take into account your family’s individual characteristics.",
+  "intro5": "The app’s goal is to evaluate the child’s developmental harmony using modern WHO and CDC (Centers for Disease Control and Prevention, USA) tables. It is important to note that the app: is not a medical tool, does not diagnose, and does not provide medical recommendations.",
+  "intro6": "We offer three testing algorithms. To get the most complete picture, check your baby using all three. However, be extremely careful: even one mistake in entering data can significantly affect the result.",
+  "intro7": "The app is designed for children born between 30–42 weeks of gestation and weighing over 1900 grams. For babies with lower indicators, recommendations are individualized and require professional attention.",
+ "yes": "Yes",
+  "no": "No",
+
+  "notSure": "Difficult to answer",
+  "lowIndicator": "Lower value",
+  "middleIndicator": "Middle",
+  "inputData": "You have entered the following data:",
+  "resultForGrowth": "Growth test result:",
+  "resultForWeight": "Weight test result:",
+  "inputWeightOn": " and weight is ",
+  "inputGrowthOn": " The growth is ",
+  "statistics": "According to statistics, in this age group, the most healthy children have a height of ",
+  "middleGrowth": "Middle Growth",
+  "middleWeight": "and weight from ",
+  "topIndicator": "Top value ",
+  "constitute" : "constitute",
+  "constituteFrom" : "constitute from",
+  "from": "to",
+  "resultTest": "You entered the following data",
+  "checkTest": "View test results",
+  "checkInput": "Check input",
+  "beginNew" : "Start over",
+  "resultOut": "Test Results",
+  "resultOutSimple": "Quick test results",
+  "inputGrowth": "You have entered the following child height: ",
+  "inputWight": "You have entered the following child weight: ",
+  "helpForOld": "If your child adds the next month in the coming days, we recommend entering this month. This indicator is critical for the first months of a child's life.",
+  "criticalIndicator": "Your child's readings are out of bounds for your age. We recommend that you take the test again. There may have been an error in measurement or age. If you get the same result again, we recommend that you see a doctor.",
+  "criticalWeightLess": "You may have entered data in kg. The entered parameter is less than the norm and is ",
+  "criticalWeightMore": "You may have entered data in kg. The parameter entered is greater than the norm and is ",
+  "criticalGrowthLess": "You may have entered data in meters. The parameter entered is below normal and is ",
+  "criticalGrowthMore": "You may have entered data in meters. The parameter entered is above the norm and is ",
+
+  "low30Week": "Sorry, this app is not available for babies born before 30 weeks of gestation",
+  "more42Week": "Please check your entry.\n In this application, the calculation is based on a maximum gestation of 42 weeks",
+  "noTerm": "Unfortunately, your baby is very premature and this application will not reflect the real state of affairs. For your child, the data will become relevant after ",
+  "factTerm": "Due to the fact that your baby was born prematurely, the corrected age is determined",
+  "twoTerm": "Due to the fact that your baby was born prematurely, this application takes into account two ages: biological and corrected",
+  "biologyOLd": "\nYour biological age is ",
+  "correctlyOLd": "\nYour corrected age is ",
+  "forBiologyOLd": "For biological age: ",
+  "forCorrectlyOLd": "For corrected age: ",
+  "correctOld": "\nResults for corrected age will be available via ",
+  "finalTerm": "Your baby is premature and is developing according to his own individual plan.\n By 7 to 9 months, he should catch up with his peers.\n Development for your baby may be adjusted for age or biological.\n",
+  "finalTermTwo": "For your convenience, the app displays 2 options.\n Don't worry if your child is not biologically aged. Especially if the child is under 9 months old.",
+  "finalTermCorrect" : "Your child is still too young at the moment. Therefore, only biological age data is displayed below.\n Data output for corrected age will be available via ",
+  "forOld": "for age ",
+  "months": " months",
+  "weeks": " weeks",
+  "kg": "kg",
+  "gr": "gr",
+  "sm": "cm",
+  "help": "Help",
+  "alarm":"Attention",
+  "well": "I see",
+  "close" : "Close",
+  "allRight": "Data is correct",
+  "checkVariant": "Please select one of the options.",
+  "checkNumber": "Please enter a number",
+  "inputNumber": "Enter a number",
+  "resultForInput": "Input results",
+  "next": "Next",
+  "mainTest": {
+    "title": "Enter data to estimate weight gain and height.",
+    "mainAttention": "This app is not medical, does not diagnose, or provide medical advice or medical information. \n Testing cannot be considered an absolute recommendation. If you are concerned about underweight or overweight or growth in your child, ALWAYS consult a doctor! ", "gender": {
+      "boy": "Boy",
+      "girl": "Girl"
+    },
+    "result": {
+      "gender": "Gender of the child",
+      "old": "Biological age",
+      "week": "Due date",
+      "fact": "Adjusted age",
+      "weightBorn": "Birth weight",
+      "weightNow": "Weight currently",
+      "growthBorn": "Growth at birth",
+      "growthNow": "Growth now",
+      "headRound": "Head diameter",
+      "growthDad": "Dad's growth ",
+      "weightDad": "Dad's weight",
+      "growthMom": "Mom's growth",
+      "weightMom": "Mom's weight"
+    },
+    "outFirstTest": {
+      "cards": {
+        "card_1": "Congratulations, your baby is growing and developing very well, which is confirmed not only by his height and weight, but also by his excellent psychomotor development. His weight, height and psycho-emotional development are fully age-appropriate.\nHowever, the proposed test is not able to provide for everyone possible options.For greater accuracy of the result, we recommend testing all 3 options.",
+        "card_2": "Congratulations, your baby is growing and developing well, which is confirmed not only by his height and weight, but also by his excellent psychomotor development. His weight, height and psycho-emotional development are fully age-appropriate.\nHowever, the proposed test is not able to provide for everyone possible options.For greater accuracy of the result, we recommend testing all 3 options.",
+        "card_3": "Congratulations, your baby is growing and developing well, which is confirmed not only by his height and weight, but also by his excellent psychomotor development. His weight, height and psycho-emotional development are fully age appropriate.\nHowever, the proposed test is not able to provide for everyone possible options.For greater accuracy of the result, we recommend testing all 3 options.",
+        "card_4": "You have a tall and well-built baby. He is taller than his peers, which is most likely a genetic feature of your family. The baby is also developing well psycho-emotionally. \nTo complete the picture, we advise you to test the child with all the proposed options.",
+        "card_5": "Your baby is somewhat smaller than his peers. Perhaps this is due to the genetic characteristics of your family. \nAt the same time, the child is developing well and there is most likely no reason for concern. However, we advise you to go through all testing options. And conduct control testing at least once a month.",
+        "card_6": "Your baby is slightly underweight than his peers. And perhaps this is his individual norm, given that the child is developing well in psycho-emotional terms. \nHowever, we advise you to pay a little more attention to controlling your baby's weight gain.\nFor the full picture, test all three options and repeat the control at least in a month.",
+        "card_7": "Despite the fact that your child is developing well, he is significantly smaller than his peers in height and weight. This may be due to the peculiarities of the weight and height of your family, but may also be the result of other reasons. We advise you to get tested for other algorithms in the app. If you get the same results, consult your doctor. \nMost likely there is no cause for concern, but in isolated cases this may be the result of certain problems.",
+        "card_8": "Your baby is significantly smaller than his peers and has signs of psychomotor retardation, which may be due to malnutrition or other reasons. Make sure that you did not make an unfortunate mistake and go through all the proposed tests again. If the result is the same - we recommend discussing this problem with your doctor.Your child may need help.",
+        "card_9": "Your child is much taller than his peers and at the same time harmoniously complex and has good psychomotor development. The baby is doing well, and high growth, most likely, is associated with the characteristics of your family. We advise you to take tests using other proposed algorithms, since These tests take into account the genetic characteristics of the family.",
+
+        "card_10": "Your child is significantly taller than their peers, but the child has a slight delay in psychomotor development. You may need to take this test again or repeat in a week. An error may have been made. \nIf you received this option again - we advise you to contact your doctor, as this test is not able to replace a medical examination, and minor problems at this age can be easily corrected.",
+        "card_11": "Your child is much larger than his peers and the baby has a lag in psychomotor development. In order not to miss a possible problem, we advise you to contact your doctor. \nHowever, first take the test again and make sure that all the data you entered is correct and no errors were made.\nPlease note that this test is not a substitute for a physical examination and examination, and at this age, possible causes are easier to correct.",
+        "card_12": "Your child is much smaller than his peers and the baby has a significant lag in psychomotor development. In order not to miss a possible problem, we advise you to contact your doctor. Remember that at this age it is easier for a baby to help if he seeks medical help in a timely manner, and this test cannot replace it.\nHowever, take the test again and make sure that all the data you entered is correct and that no errors were made.",
+        "card_13": "Your baby lags behind his peers in weight, but at the same time is significantly ahead of them in height. The psychomotor development of the crumbs corresponds to the age. We advise you to pay attention to the baby's nutrition and, if necessary, consult with your doctor for possible correction. \nHowever, take the test again and make sure that all the data you entered is correct and no fatal errors were made.",
+        "card_14": "Your baby is taller than his peers, but he is significantly underweight. And, given the delay in psychomotor development, we strongly advise you to see a doctor to avoid possible further problems. \nHowever, take the test again and make sure that all the data you entered is correct and that no fatal errors were made.",
+        "card_15": "Your baby is significantly taller than his peers, but lags behind them in weight. There is also some lag in psycho-emotional development. \nCheck that you entered all the data correctly. We advise you to take the test again or repeat in 1 week to make sure that everything is fine with the baby, as well as undergo other testing options. \nIf you receive this option again, consult your doctor. And do not delay, since at this age, possible problems are more easily corrected.",
+        "card_16": "Your baby is significantly shorter than his peers, but at the same time he has a good weight and good development. However, we advise you to watch the growth of the crumbs in the coming months, and also get tested in another way, including the weight and height of your family. \nBut first, make sure that all the data is entered without errors, and to exclude such a possibility, carefully take the test again.\nIf you have received this option again, think about consulting a doctor, because although in rare cases, it is possible that the baby medical correction is needed.",
+        "card_17": "Your baby is significantly shorter than his peers, but at the same time he has a good weight and is developing well. We advise you to observe the growth of the crumbs in the coming months, as well as get another test that includes the weight and height of your family. \nBut first eliminate the possibility of entering data with an error or take the test again.\nIf you get a similar result, it makes sense to contact your doctor.Although not often, there are cases when a child needs medical correction.",
+        "card_18": "Your baby is significantly shorter than his peers, but at the same time he is overweight and has a psychomotor retardation. We advise you to take the test again, carefully entering the data to exclude a fatal error. Also, take the test according to other suggested options. \nWhen If you get a similar result again, we advise you to consult a doctor.And remember that this test cannot replace a medical examination, and if you seek help in a timely manner, you will avoid big problems.",
+        "card_19": "Despite the fact that your baby is gaining weight very well, the baby has problems with growth and lag in psychomotor development. \nTake this test again. You may have entered some data incorrectly. \nUpon receipt repeatedly this result - we advise you to contact your doctor.And remember that this test is not able to replace a medical examination, and timely assistance and correction helps to avoid further problems.",
+
+        "card_20": "Your baby is slightly shorter than his peers, and at the same time he lags behind in weight and psycho-emotional development. Please take this test again. You may have made a mistake when entering data. Also, take the test according to other suggested options.\nIf you receive it again this result - we advise you to contact your doctor to rule out possible problems.",
+        "card_21": "Your baby is a little shorter than his peers, and more importantly, underweight. At the same time, the baby is developing well. \nYou may have made a mistake during testing. Check the entered data and, for control, test using other algorithms that take into account family peculiarities.\nIf you have obtained similar results repeatedly and using other algorithms, we advise you to consult a doctor, since even minor problems at this age are still better to be corrected in a timely manner.",
+        "card_22": "Your baby has a weight and height within the average age limits. However, the child has a lag in psychomotor development. \nYou may have made a mistake during testing. Check the entered data and test using other proposed algorithms for control. If You have received this result again - please consult your doctor, as even minor problems are best corrected in a timely manner.",
+        "card_23": "Your child is of average height, but his weight is higher than the age norms and the average weight of his peers, and at the same time, the baby has a lag in psychomotor development. \nPerhaps the data you entered was inaccurate and therefore please carefully pass the test again, as well as in other proposed options.If the result has not changed, we advise you to contact your doctor.Since even minor problems are easier to correct immediately.",
+        "card_24": "Your baby, with an average height for his age, is larger than his peers. At the same time, the baby is developing very well. \nWe advise you to take other proposed testing options that include data on the characteristics of your family. And repeat testing in a month. \nIf you repeat get the same results, then consider consulting a doctor, since even minor problems are best corrected immediately.",
+        "card_25": "Your baby, of average height for his age, is underweight and has a psychomotor retardation.\nYou may have made a mistake during testing. please carefully take this test again and other tests in this application. \nIf you receive this one again, we advise you to consult your doctor as even minor problems should be corrected as soon as possible.",
+        "card_26": "Your baby is of average height for his age plus excellent neuropsychic development, but is underweight. \nCheck if you made a mistake while testing. Take this test carefully again, as well as other tests in this application , as they take into account your family characteristics.\nIf you got similar results in all testing options, we advise you to seek medical help, since even minor problems should be corrected immediately.",
+        "card_27": "Your baby is significantly taller than his peers at a normal weight for this age. However, the child has a lag in psychomotor development. \nYou may have made a mistake when testing. We advise you to carefully go through this option again, as well as other suggested If you get similar results, be sure to consult a doctor, as even minor problems should be fixed as soon as possible.",
+        "card_28": "Your baby is much taller than his peers, but at the same time has an average weight for this age. The baby is developing well. \nPerhaps high growth is his individual feature. We advise you to take a different type of testing of this application, which takes into account hereditary data. And also check the correctness of the entered data."
+
+      },
+      "growth": {
+        "min_0": "Considering the height of the parents and the height of the child at birth, the data obtained is so low that I recommend testing again.\n There may have been an error entering the indicators. If you re-entered all the data and got this result again, I recommend contacting see a doctor for advice.",
+        "min_1": "Considering the height of the parents and the height of the child at birth, the data obtained is low.\n I recommend testing again. You may have made a mistake when entering the indicators and if you re-entered all the data and got this result again, I recommend contacting doctor for advice.",
+        "min_2": "Considering the height of the parents and the height of the child at birth, the data obtained is below the norm.\n I recommend testing again. You may have made a mistake when entering the indicators and if you re-entered all the data and got this result again, I recommend contacting see a doctor for advice.",
+        "low_0": "Considering the height of the parents and the height of the baby at birth, your baby is not growing enough.\n Although the baby's height is within the minimum range, I advise you to evaluate the growth in a month and if there is no improvement, consult a doctor.",
+        "low_1": "Your baby hasn't grown very much during this time, but you shouldn't sound the alarm.\n Perhaps, given the height of your parents, this is a family trait. And perhaps in the coming months, the growth rate of the child will increase.",
+        "low_2": "Your baby has grown remarkably since birth.\n His height is in line with the age norms, taking into account the height of mom and dad.",
+        "low_3": "Your baby has grown well since birth.\n His height is in line with the age norms, taking into account the height of mom and dad.",
+        "low_4": "Your baby has grown remarkably well since birth.\n His height is within the age group, taking into account the height of mom and dad.",
+
+        "top_1": "Your child hasn't grown very much during this time, but his performance is normal.\n And remember that every child develops differently and may begin to grow rapidly in the coming months.",
+        "top_2": "Your baby hasn't grown very much during this time. His performance is normal.\n And remember that each child develops differently and, perhaps, in the coming months, the child will begin to grow well.",
+        "top_3": "Your baby has grown remarkably well since birth.\n His height is normal for his age.",
+        "top_4": "Your baby has grown remarkably well since birth.\n His height is in line with the age norms, considering the height of mom and dad.",
+        "top_5": "Your child is growing very well, he is taller than many of his peers.\n And there are all prerequisites that in the future he will be taller than his peers",
+        "top_6": "Your child is growing well and is taller than many of his peers.\n A good indication that your child will be taller than his peers in the future.",
+        "top_7": "Your child is growing well and is taller than many of his peers.\n A good indication that your child will be tall in the future.",
+        "top_8": "Your child is growing superbly. He is taller than many of his peers. \n And there are all prerequisites that in the future he will be taller than many people.",
+        "max_6": "Make sure you entered the correct data.\n If you re-entered all the data and got this result again, I recommend that you contact your doctor for advice."
+      },
+      "weight": {
+        "min_0": "Considering the weight of the parents and the weight of the child at birth, the data obtained is so low that I recommend testing again.\n There may have been an error entering the indicators.\n If you re-entered all the data and got this result again, then I recommend you see a doctor for advice.",
+        "min_1": "Considering the weight of the parents and the weight of the child at birth, the data obtained is low. I recommend testing again.\n There may have been an error entering the indicators.\n If you re-entered all the data and got this result again, I recommend contacting see a doctor for advice.",
+        "min_2": "Considering the weight of the parents and the weight of the child at birth, the data obtained is quite low and it is recommended to retest.\n There may have been an error entering the indicators.\n If you re-entered all the data and got this result again, then I recommend consult a doctor for advice.",
+
+        "low_0": "Given the weight of the parents and the weight of the baby at birth, your baby is not gaining enough weight.\n Although the baby's weight is within the minimum range, I advise you to consult a doctor to eliminate the possible cause of insufficient weight gain.",
+        "low_1": "Your baby hasn't gained much weight during this time, but don't be alarmed.\n It's most likely a family trait, considering your weight. Your baby's rate of weight gain may increase in the coming months. ",
+        "low_2": "Your baby has gained remarkably since birth.\n His weight is in line with age norms, which means that your baby is optimally growing and developing physically.",
+        "low_3": "Your baby has gained well since birth.\n His weight is in line with age norms, which means that the baby is growing and developing optimally physically.",
+        "low_4": "Your baby has put on great weight since birth.\n His weight is in line with age norms, which means that the baby is growing and developing optimally physically.",
+
+        "top_1": "Based on the weight of the parents and the weight of the baby at birth, your baby is not gaining enough weight. \n Although the baby's weight is within the minimum range, I advise you to consult a doctor to eliminate the possible cause of insufficient weight gain.",
+        "top_2": "Given the weight of the parents and the weight of the baby at birth, your baby is not gaining enough weight.\n Although the baby's weight is within the minimum range, I advise you to consult a doctor to eliminate the possible cause of insufficient weight gain.",
+        "top_3": "Your baby has gained remarkably since birth.\n His weight corresponds to age norms, which means that the baby is growing and developing optimally physically.",
+        "top_4": "Your baby has gained a lot of weight since birth.\n His weight is in line with age norms, which means that the baby is growing and developing optimally physically.",
+        "top_5": "Your child is gaining very well and weighs more than many of his peers. \n Currently, the weight is in the normal range for age.\n Remember that all children develop at their own pace and may develop in the coming years. months, due to increased physical activity, weight gain will slow down significantly.\n But if this does not happen, it may be worth contacting a doctor for advice.",
+        "top_6": "Your child is gaining very well and is slightly overweight than many of his peers. \n The weight is currently in the upper normal range for age.\n Remember that all children develop at their own pace and may in the coming months, due to increased physical activity, weight gain will slow significantly.\n But if this does not happen, it may be worth contacting a doctor for advice.",
+        "top_7": "Your child is gaining very well and weighs more than many of his peers. \n Currently, the weight is in the upper limit of normal for age.\n Remember that all children develop at their own pace and may in the coming months, due to increased physical activity, weight gain will slow down significantly.\n But if this does not happen, it may be worth contacting a doctor for advice.",
+        "top_8": "Your child is gaining very well and weighs more than many of his peers. \n The weight is currently in the upper limit of normal for age.\n Remember that all children develop at their own pace and may in the coming months, due to increased physical activity, weight gain will slow down significantly. \n But if this does not happen, it may be worth contacting a doctor for advice.",
+        "max_6": "Make sure you entered the correct data.\n If you re-entered all the data and got this result again, I recommend that you contact your doctor for advice."
+      }
+
+    },
+    "question0": {
+      "title": "Please enter the gender of the child.",
+      "help": "Please select boy or girl."
+    },
+    "question1": {
+      "title": "Please enter how old the child is now (up to 36 months only).",
+      "help": "Enter the number of full months. If your child adds the next month in the coming days, we recommend that you enter this month.",
+      "warning": "You have entered a number of months greater than 36. Unfortunately, the test is not valid for children over 3 years old."
+    },
+    "question2": {
+      "title": "Please enter what week the baby was born.",
+      "help": "Enter the number of weeks.",
+      "warning": "Please check the data. The calculation range is 30 to 42 weeks."
+    },
+    "question3": {
+      "title": "Please enter the weight (in GRAM) of the child at birth.",
+      "help": "It is enough to enter a number up to hundredths of grams. (Example - 3300 grams)",
+      "warning": "Please check the data. The calculation range is from 1900 to 6500 grams.\n Perhaps you are entering weight in kg"
+    },
+    "question4": {
+      "title": "Please enter the current weight (in GRAM) of the child.",
+      "help": "It is enough to enter a number up to hundredths of grams. (Example - 6600 grams)",
+      "warning": "Please check the data. You may be entering weight in kg. \n Range for calculating this age"
+    },
+    "question5": {
+      "title": "Please enter the height (in cm) of the child at birth.",
+      "help": "You only need to enter centimeters.",
+      "warning": "Please check the data. The calculation range is 40 to 65 cm."
+    },
+    "question6": {
+      "title": "Please enter the current height (in cm) of the child.",
+      "help": "You only need to enter centimeters.",
+      "warning": "Please check the data. Range for calculating this age"
+    },
+    "question7": {
+      "title": "Please enter the current head circumference (in cm) of the child.",
+      "help": "Child's head is measured with a soft centimeter tape along the most protruding parts - from the brow ridges above the ears and to the back of the head.",
+      "warning": "Please check the data. Range for calculating this age"
+    },
+    "question8": {
+      "title": "Please enter your father's height (in cm).",
+      "help": "You only need to enter centimeters.",
+      "warning": "Please check the data. The calculation range is from 120 to 260 cm."
+    },
+    "question9": {
+      "title": "Please enter the weight (in kg) of dad.",
+      "help": "It is enough to enter an approximate value with an error of 5 kg",
+      "warning": "Please check the data. The calculation range is from 50 to 240 kg."
+    },
+    "question10": {
+      "title": "Please enter your mother's height (in cm).",
+      "help": "You only need to enter centimeters.",
+      "warning": "Please check the data. The calculation range is from 120 to 210 cm."
+    },
+    "question11": {
+      "title": "Please enter the weight (in kg) of the mother.",
+      "help": "It is enough to enter an approximate value with an error of 5 kg",
+      "warning": "Please check the data. The calculation range is from 40 to 210 kg."
+    },
+    "question12": {
+      "title": "Congratulations! You've completed the test! Moving on.",
+      "help": "You can see the results by right clicking",
+      "warning": ""
+    }
+  },
+  "psychoTest": {
+    "header" : "Neuro&Physically test",
+    "title": "Assessment of neuro-physical development of the child.",
+    "titleOfPsycho": "Child development",
+    "start": "Please answer the question \"Your child\"",
+    "question0": {
+      "title": "Please enter the gender of the child.",
+      "help": "Please select a boy or girl"
+    },
+    "question1": {
+      "title": "Please enter how old the baby is now (only up to 12 months old).",
+      "help": "Enter the number of full months. If your child adds the next month in the coming days, we recommend that you enter this month.",
+      "warning": "You have entered a number of months greater than 12. Unfortunately, the test does not work for older children."
+    },
+    "question2": {
+      "title": "Please enter what week the baby was born.",
+      "help": "Enter the number of weeks.",
+      "warning": "Please check the data. The calculation range is 30 to 42 weeks."
+    },
+    "question3": {
+      "title": "Please enter the current weight (in GRAM) of the child.",
+      "help": "It is enough to enter a number up to hundredths of grams. (Example - 6600 GRAMS)",
+      "warning": "You may be entering in grams. Please check the data. Range for calculating this age"
+    },
+    "question4": {
+      "title": "Please enter the current height (in cm) of the child.",
+      "help": "You only need to enter centimeters.",
+      "warning": "Please check the data. Range for calculating this age"
+    },
+    "question5": {
+      "title": "Physical data entered, moving on.",
+      "help": "For neuro-psychiatric evaluation, click next.",
+      "warning": ""
+    },
+    "quiz": {
+      "0": {
+        "text1": "Fixes the gaze for a few seconds on a bright, contrasting stationary object.",
+        "text2": "Jerks and blinks when there is a sharp sound.",
+        "text3": "Crying becomes more varied.",
+        "text4": "Follows/ tries to follow a smoothly moving contrast object.",
+        "text5": "Listens to your gentle voice.",
+        "text6": "Tries to smile at you when you smile/voice.",
+        "text7": "Tries to raise and hold his head while lying on his stomach."
+      },
+      "one": {
+        "text1": "Fixes the gaze for a few seconds on a bright, contrasting stationary object.",
+        "text2": "Jerks and blinks when there is a sharp sound.",
+        "text3": "Crying becomes more varied.",
+        "text4": "Follows/ tries to follow a smoothly moving contrast object.",
+        "text5": "Listens to your gentle voice.",
+        "text6": "Tries to smile at you when you smile/voice.",
+        "text7": "Tries to raise and hold his head while lying on his stomach."
+      },
+      "2": {
+        "text1": "Looks at your face for a long time.",
+        "text2": "Pay attention to the faces of people around.",
+        "text3": "Looks at a fixed, contrasting object or toy for a long time.",
+        "text4": "Follows a moving contrast toy.",
+        "text5": "Turns its head towards a loud sound and searches for the source.",
+        "text6": "Replies with a smile when you speak kindly.",
+        "text7": "Lying on his stomach raises and holds his head longer every day.",
+        "text8": "Movements of arms and legs become smoother and more coordinated.",
+        "text9": "Produces individual sounds."
+      },
+      "3": {
+        "text1": "In response to your appeal or an interesting toy - a \"revive\" complex.",
+        "text2": "Turns head towards your voice or unusual sound.",
+        "text3": "Keep your head upright in your arms well.",
+        "text4": "While standing upright, it focuses on stationary objects.",
+        "text5": "Consciously raises hand to mouth.",
+        "text6": "Accidentally bumps into a suspended toy hanging over his chest with his hands.",
+        "text7": "Starts to hum.",
+        "text8": "He rests on his forearms while lying on his stomach and raises his head high.",
+        "text9": "With support under the armpits, it rests firmly with the legs bent at the hip joints.",
+        "text10": "Picks off well and confidently from a hard surface or an adult's outstretched hand."
+      },
+      "4": {
+        "text1": "Recognizes and rejoices in you.",
+        "text2": "Finds with eyes, without turning the head, an invisible sound source.",
+        "text3": "Laughs loudly in response to affection/communication.",
+        "text4": "Gulit is more complex and varied.",
+        "text5": "Holds breast or bottle while feeding.",
+        "text6": "Turns (or attempts to roll over) from back to stomach.",
+        "text7": "He rests with half-bent legs on a hard surface.",
+        "text8": "When resting on a hard surface with his feet, he confidently straightens his legs (jumps).",
+        "text9": "Examines and grabs a hanging toy.",
+        "text10": "While playing with a toy, shake it and swing it around.",
+        "text11": "Brings hands to mouth confidently."
+      },
+      "5": {
+        "text1": "Reacts differently, distinguishing relatives and strangers by appearance.",
+        "text2": "Recognizes your voice well.",
+        "text3": "Distinguishes between stern and affectionate tone of your speech.",
+        "text4": "Takes the toy from your hands confidently.",
+        "text5": "Holds a toy for a long time.",
+        "text6": "Lies on stomach for a long time, leaning on palms of outstretched arms.",
+        "text7": "Rolls over (or actively tries) from back to stomach.",
+        "text8": "Stands upright and stable with underarm support.",
+        "text9": "For a long time and with pleasure, humming melodiously.",
+        "text10": "Eats thick and semi-thick food from a spoon.",
+        "text11": "While walking, she is interested in objects around and gets angry if the view is obstructed."
+      },
+      "6": {
+        "text1": "Reacts differently to own and other people's names.",
+        "text2": "Rolls over from stomach to back and from back to stomach with confidence and pleasure.",
+        "text3": "Makes attempts to crawl, finding its own movement options.",
+        "text4": "Tries to sit without support.",
+        "text5": "Freely picks up a toy from different positions and practices for a long time, shifts from one hand to another.",
+        "text6": "He confidently brings things to his mouth, tasting everything.",
+        "text7": "Pronounces individual syllables.",
+        "text8": "Eats food off a spoon, skimming it off with her lips.",
+        "text9": "Pronounces syllables, starts to babble.",
+        "text10": "Shows curiosity about things that are not available and tries to get them."
+      },
+      "7": {
+        "text1": "Interacts confidently with the toy - knocks, swings, throws.",
+        "text2": "Good at crawling or trying.",
+        "text3": "To the question \"Where?\" finds with a glance an object that is constantly in a certain place (for example, a watch).",
+        "text4": "Trying to get your attention, maybe even throwing toys.",
+        "text5": "Distinguishes not only your intonation, but also people from your inner circle and reacts adequately (if you raise your voice, you may burst into tears and smile at an affectionate speech).",
+        "text6": "Tries to mimic the sounds of your speech." ,
+        "text7": "Long and varied babble.",
+        "text8": "Drinks from a cup with your help.",
+        "text9": "Eats from a spoon, skimming the food with her lips."
+      },
+      "8": {
+        "text1": "He sits and lies down from different positions.",
+        "text2": "Holding on to a support, he gets up, stands, sits down (or does at least partially).",
+        "text3": "Tries to step over at the support with a side step (sideways).",
+        "text4": "Pronounces syllables with pleasure and confidence.",
+        "text5": "He holds and eats suitable food.",
+        "text6": "Performs the previously learned actions with pleasure. For example, “Okay”, “Give me a pen”.",
+        "text7": "Loves to watch the action of another child.",
+        "text8": "Does toys for a long time and in various ways.",
+        "text9": "Mimics your actions with toys (pushing, knocking, taking out, etc.)."
+      },
+      "9":  {
+        "text1": "He enjoys dancing to rhythmic music (if they sing and dance with the child at home).",
+        "text2": "Acts on items depending on their properties (rolls, opens, rattles, etc.).",
+        "text3": "Watches a falling object.",
+        "text4": "Can grasp objects with the tip of thumb and forefinger.",
+        "text5": "Walks along the support, slightly holding onto the handles.",
+        "text6": "To the question \"Where?\" locates several familiar objects regardless of distance.",
+        "text7": "Knows his name, turns around when called.",
+        "text8": "Imitates, repeating after you syllables that are not in his babbling.",
+        "text9": "Drinks well from a cup, holding it lightly with his hands.",
+        "text10": "Loves to play with other children. Crawls or crawls to meet.",
+        "text11": "Imitates the actions, movements of another child."
+      },
+      "10": {
+        "text1": "Independently and at your request performs learned actions: opens, closes, takes out, puts out.",
+        "text2": "Uses the gestures Bye Bye, No, Yes.",
+        "text3": "Walks forward with support from both hands.",
+        "text4": "Able to climb up and down low surfaces.",
+        "text5": "Finds and gives familiar items when requested.",
+        "text6": "Mimics you and repeats new syllables.",
+        "text7": "During the game (\"hide and seek\", \"catch-catch\") performs learned actions and movements.",
+        "text8": "Consciously performs actions imitating you. For example, “Talking on the phone.",
+        "text9": "Lying on tummy, raises torso and looks around or gets on all fours, sways, constantly turns over."
+      },
+      "eleven": {
+        "text1": "He rejoices at the arrival of children. But he already has his own selective attitude towards different children.",
+        "text2": "Stands on its own.",
+        "text3": "Takes first independent steps.",
+        "text4": "Performs various actions at your request - feeds the bear, puts the doll to bed, etc.",
+        "text5": "Follows simple instructions. For example, waves bye-bye.",
+        "text6": "Pronounces the first words - designations \"Av - av\", \"Kis - kis\", \"Give\".",
+        "text7": "Dice-to-dice, builds a simple tower with dice or matching items.",
+        "text8": "Assembles the pyramid correctly with a little help from you.",
+        "text9": "Loves to open lockers, open drawers and examine found items."
+      },
+      "12":  {
+        "text1": "Recognizes you in the photo.",
+        "text2": "Walks (or attempts to walk) on its own.",
+        "text3": "Performs actions previously learned while playing with toys.",
+        "text4": "Sustainable complex game skills appear (drive, feed dolls, transport cubes).",
+        "text5": "Distinguishes objects by shape - cube, brick (if shown and called).",
+        "text6": "Speaks up to 6-10 lite words, or words in \"their\" language.",
+        "text7": "Constantly repeats new words.",
+        "text8": "Understands without displaying multiple item names.",
+        "text9": "Understands the words “No”, “No” (if used).",
+        "text10": "Drinks from a cup on his own. ",
+        "text11": "Gives/gives another child a toy.",
+        "text12": "Looking for a toy hidden by another child. ",
+        "text13": "Understands names of objects, names of adults. "
+      }
+    }
+  },
+  "quickTest": {
+    "header": "Quick test",
+    "title": "Express assessment of the physical development of a child from 0 to 3 years.",
+    "question1": {
+      "title": "Please enter how old the baby is now (up to 36 months only).",
+      "help": "Enter the number of full months. If your child adds the next month in the coming days, we recommend that you enter this month.",
+      "warning": "You have entered a number of months greater than 36. Unfortunately, the test does not work for older children."
+    },
+    "question5": {
+      "title": "Congratulations! You have entered all the data. Moving on!",
+      "help": "Press the right button to get the test result",
+      "warning": "You have entered a number of months greater than 36. Unfortunately, the test does not work for older children."
+    },
+    "growth0": "Your toddler is significantly LOWER than his peers",
+    "growth1": "Your child is shorter than most of his peers",
+    "growth2": "Your little one is slightly below average",
+    "growth3": "Your child is the perfect height for most children of this age",
+    "growth4": "Your baby is slightly above average",
+    "growth5": "Your little one is tall, which is slightly taller than children of his age",
+    "growth6": "Your baby is very tall, well ahead of the average height of its peers",
+    "weight0": "Your child's weight is very small, which is significantly less than the average weight of his peers",
+    "weight1": "Your baby is underweight, which is slightly less than most of his peers",
+    "weight2": "Your baby is slightly below average.",
+    "weight3": "Your baby is at the ideal average weight",
+    "weight4": "Your child is above average",
+    "weight5": "Your baby has more weight than his peers",
+    "weight6": "Your child's weight is very large, well above the average weight of their peers"
+
+  },
+  "products":{
+    "title": "Наши продукты",
+    "apps": "Наши приложения",
+    "newborn": "Новорожденный. От А до Я",
+    "firstApp": "Первое и пробное приложение.",
+    "descriptionsFirst": "Короткими видео рассказывается все о первом месяце крохи"
+  }
+
+}
+
