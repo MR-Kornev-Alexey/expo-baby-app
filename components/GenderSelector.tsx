@@ -31,7 +31,14 @@ const GenderSelector: React.FC<GenderSelectorProps> = ({
                     selectedGender === 'boy' && styles.buttonActive,
                 ]}
             >
-                <Text style={styles.buttonText}>{t('baby_boy')}</Text>
+                <Text
+                    style={[
+                        styles.buttonText,
+                        selectedGender === 'boy' && styles.textActive,
+                    ]}
+                >
+                    {t('baby_boy')}
+                </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => onGenderSelect('girl')}
@@ -40,8 +47,16 @@ const GenderSelector: React.FC<GenderSelectorProps> = ({
                     selectedGender === 'girl' && styles.buttonActive,
                 ]}
             >
-                <Text style={styles.buttonText}>{t('baby_girl')}</Text>
+                <Text
+                    style={[
+                        styles.buttonText,
+                        selectedGender === 'girl' && styles.textActive,
+                    ]}
+                >
+                    {t('baby_girl')}
+                </Text>
             </TouchableOpacity>
+
             <NextButton
                 onPress={onNext}
                 enabled={buttonState === 'enabled'}
@@ -71,10 +86,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#1b5e20',
     },
     buttonText: {
-        color: '#fff',
+        color: '#333',
         fontSize: 18,
-        fontWeight: '600',
         textAlign: 'center',
+        textTransform: "uppercase"
+    },
+     textActive: {
+        color: '#fff', // Цвет текста активной кнопки
     },
 });
 

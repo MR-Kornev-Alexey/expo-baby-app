@@ -58,7 +58,10 @@ const NumberInput: React.FC<NumberInputProps> = ({
                 style={isValid ? styles.buttonNext : styles.buttonDisabled}
                 disabled={!isValid} // Блокируем кнопку, если число некорректно
             >
-                <Text style={styles.buttonText}>{nextButtonText}</Text>
+                <Text                 style={[
+                    styles.buttonText,
+                    isValid && styles.textActive,
+                ]}>{nextButtonText}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -99,10 +102,13 @@ const styles = StyleSheet.create({
         textTransform: "uppercase"
     },
     buttonText: {
-        color: '#fff',
-        fontSize: 16,
-        fontWeight: '600',
+        color: '#333',
+        fontSize: 18,
+        textAlign: 'center',
         textTransform: "uppercase"
+    },
+    textActive: {
+        color: '#fff', // Цвет текста активной кнопки
     },
 });
 
