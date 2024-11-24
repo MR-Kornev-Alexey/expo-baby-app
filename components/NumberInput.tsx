@@ -1,15 +1,34 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-const NumberInput = ({flag, onNext, nextButtonText }) => {
-    const [number, setNumber] = useState<number | string>('');
+interface NumberInputProps {
+    flag?: string; // Дополнительный флаг
+    under: number; // Нижний предел
+    over: number; // Верхний предел
+    onNext: (number: number, flag?: string) => void; // Callback при успешном вводе
+    nextButtonText?: string; // Текст кнопки
+}
+
+const NumberInput: React.FC<NumberInputProps> = ({
+                                                     flag,
+                                                     under,
+                                                     over,
+                                                     onNext,
+                                                     nextButtonText = 'Дальше', // Значение по умолчанию для кнопки
+                                                 }) => {
+    const [number, setNumber] = useState<string>(''); // Храним значение как строку для обработки ввода
     const [isValid, setIsValid] = useState<boolean>(false);
 
-    const handleInputChange = (value) => {
+    useEffect(() => {
+        setNumber(''); // Сбрасываем поле ввода
+        setIsValid(false); // Деактивируем кнопку
+    }, [under, over, flag]);
+
+    const handleInputChange = (value: string) => {
         const parsedValue = parseInt(value, 10);
 
-        // Проверяем, является ли значение числом и входит ли оно в диапазон
-        if (!isNaN(parsedValue) && parsedValue >= 0 && parsedValue <= 36) {
+        // Проверяем корректность значения в диапазоне
+        if (!isNaN(parsedValue) && parsedValue >= under && parsedValue <= over) {
             setIsValid(true);
         } else {
             setIsValid(false);
@@ -20,7 +39,7 @@ const NumberInput = ({flag, onNext, nextButtonText }) => {
 
     const handleNext = () => {
         if (isValid) {
-            onNext(number, flag); // Передаём введённое значение родительскому компоненту
+            onNext(Number(number), flag); // Передаём числовое значение и флаг родительскому компоненту
         }
     };
 
@@ -31,15 +50,15 @@ const NumberInput = ({flag, onNext, nextButtonText }) => {
                 keyboardType="numeric"
                 value={number}
                 onChangeText={handleInputChange}
-                placeholder="Введите число от 0 до 36"
-                maxLength={2} // Ограничение на ввод до 2 символов
+                placeholder={`Введите число от ${under} до ${over}`}
+                maxLength={over.toString().length} // Ограничиваем ввод длиной верхнего предела
             />
             <TouchableOpacity
                 onPress={handleNext}
                 style={isValid ? styles.buttonNext : styles.buttonDisabled}
                 disabled={!isValid} // Блокируем кнопку, если число некорректно
             >
-                <Text style={styles.buttonText}>{nextButtonText || 'Дальше'}</Text>
+                <Text style={styles.buttonText}>{nextButtonText}</Text>
             </TouchableOpacity>
         </View>
     );

@@ -18,6 +18,8 @@ export default function Simple() {
         gender: "",
         old: null,
         week: null,
+        weightNow: null,
+        growthNow: null,
         showTheGender: true,
         showTheInput: false,
         isShowButtonTest: false,
@@ -93,31 +95,41 @@ export default function Simple() {
         }
     };
     const getNextNumber = (data, flag) => {
-          switch (flag) {
-            case flag === "old":
-                alert(data)
+            if (flag === "old") {
                 setState(prevState => ({
                     ...prevState,
                     old: data,
+                    currentPage: prevState.currentPage + 1,
                 }));
-                break
-            case flag === "week":
+            } else if (flag === "week") {
                 setState(prevState => ({
                     ...prevState,
                     week: data,
+                    currentPage: prevState.currentPage + 1,
                 }));
-                break
-            default:
-                break
+            } else if (flag === "weightNow") {
+                setState(prevState => ({
+                    ...prevState,
+                    weightNow: data,
+                    currentPage: prevState.currentPage + 1,
+                }));
+            } else if (flag === "growthNow") {
+                setState(prevState => ({
+                    ...prevState,
+                    growthNow: data,
+                    currentPage: prevState.currentPage + 1,
+                }));
+            }
         }
-    };
+    ;
 
     const question = [
         {
             number: 0,
             question: t('psychoTest.question0.title'),
             help: t('psychoTest.question0.help'),
-            key: 'gender'
+            key: 'gender',
+            warning: t('psychoTest.question0.warning'),
         },
         {
             number: 1,
@@ -125,13 +137,38 @@ export default function Simple() {
             key: 'old',
             help: t('quickTest.question1.help'),
             warning: t('quickTest.question1.warning'),
+            meta: t('months'),
         },
         {
             number: 2,
             question: t('psychoTest.question2.title'),
             key: 'week',
             help: t('psychoTest.question2.help'),
-            warning: t('psychoTest.question2.warning')
+            warning: t('psychoTest.question2.warning'),
+            meta: t('weeks'),
+        },
+        {
+            number: 3,
+            question: t('psychoTest.question3.title'),
+            key: 'weightNow',
+            help: t('psychoTest.question3.help'),
+            warning: t('psychoTest.question3.warning'),
+            meta: t('gr'),
+        },
+        {
+            number: 4,
+            question: t('psychoTest.question4.title'),
+            key: 'growthNow',
+            meta: t('sm'),
+            help: t('psychoTest.question4.help'),
+            warning: t('psychoTest.question4.warning'),
+        },
+        {
+            number: 5,
+            question: t('quickTest.question5.title'),
+            help: t('quickTest.question5.help'),
+            key: 'result',
+            warning: t('quickTest.question5.warning'),
         }
     ];
 
@@ -167,7 +204,9 @@ export default function Simple() {
                 <Text style={styles.cardTitle}>
                     gender {state.gender} <br/>
                     old: {state.old} <br/>
-                    week: {state.week}
+                    week: {state.week} <br/>
+                    weightNow: {state.weightNow}<br/>
+                    growthNow: {state.growthNow}
                 </Text>
             </View>
             <View style={styles.card}>
@@ -181,16 +220,18 @@ export default function Simple() {
                     buttonState={buttonState}
                     onNext={getNext}
                     nextButtonText={t('next')}
-                />
-                }
-                {state.currentPage === 1 && <NumberInput flag="old" onNext={getNextNumber} nextButtonText={t('next')}/>
-                }
-                }
-                {state.currentPage === 2 && <NumberInput flag="week" onNext={getNextNumber} nextButtonText={t('next')}/>
-                }
+                />}
+                {state.currentPage === 1 &&
+                    <NumberInput flag="old" under={0} over={36} onNext={getNextNumber} nextButtonText={t('next')}/>}
+                {state.currentPage === 2 &&
+                    <NumberInput flag="week" onNext={getNextNumber} nextButtonText={t('next')} over={42} under={36}/>}
+                {state.currentPage === 3 &&
+                    <NumberInput flag="weightNow" onNext={getNextNumber} nextButtonText={t('next')} over={25000}
+                                 under={2600}/>}
+                {state.currentPage === 4 &&
+                    <NumberInput flag="growthNow" onNext={getNextNumber} nextButtonText={t('next')} over={160}
+                                 under={36}/>}
             </View>
-
-            {/* Modal component */}
             <CustomModal
                 visible={state.isModalOpen}
                 onClose={closeModal}
