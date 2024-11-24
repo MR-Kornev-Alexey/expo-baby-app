@@ -1,4 +1,3 @@
-import {Colors} from './Colors'
 import fonts from './fonts'; // Import the fonts object
 
 // define space grid
@@ -16,14 +15,72 @@ const space16 = spaceGrid * 16;
 const gStyle = {
     activeOpacity: 0.7,
 
+    // ///////////////////////////////////////////////////////////////////////////
+    // simple
+    container_light: {
+        flex: 1,
+        backgroundColor: '#fff',
+        paddingBottom: 20,
+    },
+    container_dark: {
+        flex: 1,
+        backgroundColor: '#121212',
+        paddingBottom: 20,
+    },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: "center",
+        flex:1,
+        paddingTop: 20,
+        marginTop: 30,
+        paddingHorizontal: 12,
+    },
+    headerButton: {
+        padding: 0,
+    },
+    headerTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#000',
+        alignSelf: 'center',
+        textAlign: 'center',
+        padding:20
+    },
+    helper: {
+        marginTop: 20,
+    },
+    helpButton: {
+        position: 'absolute',
+        top: 20,
+        right: 90,
+        zIndex: 99999,
+        cursor: "pointer"
+    },
+    card: {
+        marginHorizontal: 20,
+        marginTop: 30,
+        padding: 20,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        shadowOffset: { width: 0, height: 4 },
+        elevation: 5,
+    },
+    cardTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 15,
+    },
+
     // containers
     // ///////////////////////////////////////////////////////////////////////////
     container: {
-        backgroundColor: Colors.bgRose,
         flex: 1
     },
     videoContainer: {
-        backgroundColor: Colors.headerBarBg,
         padding: 12,
         borderRadius: 16,
         fontSize: 14,
@@ -31,12 +88,10 @@ const gStyle = {
     },
     innButton: {
         fontSize: 16,
-        color: Colors.bgRed
     },
     contactButton: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        borderColor: Colors.bgRed,
         borderRadius: 16,
         borderWidth: 2,
         width: '92%',
@@ -44,7 +99,6 @@ const gStyle = {
         marginRight: 'auto',
         marginBottom: 2,
         marginTop: 12,
-        backgroundColor: Colors.bgRose,
         paddingVertical: 12,
         paddingHorizontal: 8
     },
@@ -55,7 +109,6 @@ const gStyle = {
         marginRight: 'auto',
         marginBottom: 2,
         marginTop: 12,
-        backgroundColor: Colors.redBaseDark,
         paddingHorizontal: 6
     },
     mainButton: {
@@ -64,13 +117,11 @@ const gStyle = {
         marginRight: 'auto',
         marginBottom: 2,
         marginTop: 12,
-        backgroundColor: Colors.bgRed,
         paddingHorizontal: 6
     },
     videoText: {
         fontSize: 18,
         width: '92%',
-        color: Colors.bgRed,
         paddingVertical: 12,
         textAlign: 'center'
     },
@@ -158,7 +209,6 @@ const gStyle = {
     // text
     // ///////////////////////////////////////////////////////////////////////////
     heading: {
-        color: Colors.heading,
         fontFamily: fonts.medium,
         fontSize: 22,
         marginBottom: 4,
@@ -166,7 +216,6 @@ const gStyle = {
         marginTop: 16
     },
     headingText: {
-        color: Colors.black50,
         fontFamily: fonts.medium,
         paddingHorizontal: 14,
         fontSize: 18,
@@ -178,7 +227,6 @@ const gStyle = {
     FAQMain: {
         paddingHorizontal: 8,
         paddingVertical: 16,
-        backgroundColor: Colors.bgRed,
         alignSelf: 'center',
         borderRadius: 16,
         marginVertical: 8
@@ -187,12 +235,10 @@ const gStyle = {
         paddingHorizontal: 8,
         paddingVertical: 16,
         borderRadius: 16,
-        backgroundColor: Colors.white
     },
     mainBanner: {
         fontSize: 32,
         fontWeight: 'bold',
-        color: Colors.black,
         textAlign: 'center'
     },
     input: {
@@ -230,20 +276,17 @@ const gStyle = {
     },
     // modal
     textModalClose: {
-        color: Colors.lightColor,
         fontSize: 20,
         marginHorizontal: 'auto',
         marginVertical: 10,
         textAlign: 'center'
     },
     textModal: {
-        color: Colors.lightColor,
         fontSize: 20,
         margin: 10,
         textAlign: 'center'
     },
     textMainModal: {
-        color: Colors.black,
         fontSize: 13,
         margin: 10
     },
@@ -257,8 +300,6 @@ const gStyle = {
         justifyContent: 'center'
     },
     warning_modal: {
-        backgroundColor: Colors.lightColor,
-        borderColor: Colors.mainColor,
         borderRadius: 16,
         borderWidth: 1,
         height: 300,
@@ -266,52 +307,12 @@ const gStyle = {
     },
     warning_title: {
         alignItems: 'center',
-        backgroundColor: Colors.redBaseDark,
         borderTopLeftRadius: 16,
         borderTopRightRadius: 16,
         height: 50,
         justifyContent: 'center',
         position: 'relative',
         top: -1
-    },
-    warning_button: {
-        backgroundColor: Colors.inactiveGrey,
-        borderBottomLeftRadius: 16,
-        borderBottomRightRadius: 16,
-        bottom: -1,
-        height: 50,
-        justifyContent: 'center',
-        position: 'relative'
-    },
-    // end modal
-    FAQInn: {
-        color: Colors.bgRose,
-        marginBottom: 12,
-        textAlign: 'center'
-    },
-    containerHeading: {
-        borderBottomColor: Colors.moreSectionBorder,
-        borderBottomWidth: 1,
-        paddingHorizontal: 8,
-        paddingTop: 8,
-        paddingBottom: 4
-    },
-    containerBorder: {
-        borderBottomColor: Colors.moreSectionBorder,
-        borderBottomWidth: 1,
-        paddingBottom: 12
-    },
-    containerResultWithOut: {
-        paddingHorizontal: 8,
-        paddingBottom: 4,
-        marginTop: 16
-    },
-    containerResult: {
-        borderBottomColor: Colors.moreSectionBorder,
-        borderBottomWidth: 1,
-        paddingHorizontal: 8,
-        paddingBottom: 4,
-        marginTop: 16
     },
     mainTitleNewBold: {
         marginTop: 16,
@@ -329,96 +330,6 @@ const gStyle = {
         paddingHorizontal: 10,
         paddingVertical: 12,
         fontSize: 16
-    },
-    headingTextResult: {
-        color: Colors.black,
-        fontFamily: fonts.medium,
-        paddingHorizontal: 14,
-        fontSize: 18,
-        marginBottom: 4,
-        marginLeft: 4,
-        marginTop: 12,
-        textAlign: 'center'
-    },
-    headingTextSource: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        fontSize: 16,
-        textAlign: 'center'
-    },
-    headingTextBlack: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        paddingHorizontal: 14,
-        fontSize: 16,
-        marginBottom: 4,
-        marginLeft: 4,
-        marginTop: 12,
-        textAlign: 'center'
-    },
-    headingTextLeft: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        paddingHorizontal: 14,
-        fontSize: 18,
-        marginBottom: 4,
-        marginLeft: 4,
-        marginTop: 12,
-        textAlign: 'left'
-    },
-    bigText: {
-        color: Colors.black,
-        fontFamily: fonts.medium,
-        fontSize: 16
-    },
-    homeTextBlack: {
-        color: Colors.black50,
-        fontFamily: fonts.bold,
-        paddingHorizontal: 14,
-        fontSize: 14,
-        marginBottom: 10,
-        marginLeft: 4
-    },
-    homeTextSimple: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        fontSize: 14,
-        textAlign: 'center'
-    },
-    homeText: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        paddingHorizontal: 14,
-        fontSize: 14,
-        marginBottom: 4,
-        marginLeft: 4,
-        marginTop: 12,
-    },
-    Border:{
-        borderBottomColor: Colors.moreSectionBorder,
-        borderBottomWidth: 1,
-        marginBottom: 8
-    },
-    FAQTextAnswer: {
-        color: Colors.black50,
-        fontFamily: fonts.medium,
-        paddingHorizontal: 14,
-        fontSize: 14,
-        marginBottom: 4,
-        marginLeft: 4,
-        marginTop: 4,
-        textAlign: 'justify'
-    },
-    scoreTitleText: {
-        color: Colors.headerBarBg,
-        paddingVertical: 14,
-        marginTop: 12,
-        fontWeight: 'bold'
-    },
-    homeTextBold: {
-        color: Colors.black,
-        fontFamily: fonts.medium,
-        fontWeight: 'bold'
     },
     imgHome: {
         marginTop: 32,
@@ -450,21 +361,6 @@ const gStyle = {
         marginTop: 24,
         width: '100%'
     },
-    buttonDown: {
-        alignItems: 'center',
-        borderColor: Colors.bgRed,
-        borderRadius: 16,
-        borderWidth: 2,
-        height: 50,
-        justifyContent: 'center',
-        width: 60
-    },
-    // nav tab
-    // ///////////////////////////////////////////////////////////////////////////
-    navTabStyle: {
-        backgroundColor: Colors.bgRed,
-        borderTopColor: Colors.bgRed
-    }
 }
 
 export default gStyle;

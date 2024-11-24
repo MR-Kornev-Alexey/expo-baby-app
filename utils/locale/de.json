@@ -7,6 +7,15 @@
   "language_de": "Deutchland",
   "theme_switch": "Переключить тему",
   "language_switch": "Sprachumschaltung",
+  "babys_gender": "Geschlecht des Kindes",
+  "baby_girl": "Mädchen",
+  "baby_boy": "Junge",
+  "babys_old": "Alter des Kindes",
+  "babys_week": "In welcher Woche wurde er geboren?",
+  "babys_weight": "Gewicht jetzt",
+  "babys_growth": "Wachstum jetzt",
+  "result_growth": "Wachstumsergebnis",
+  "result_weight": "Ergebnis nach Gewicht",
   "tab": {
     "main": "Mein",
     "who": "WHO test",
@@ -90,7 +99,7 @@
   "months": " мес.",
   "weeks": " недель",
   "kg": " кг",
-  "gr": " гр",
+  "gr": "gr",
   "sm": "см",
   "help": "Помощь",
   "alarm":"Achtung!",
@@ -101,7 +110,7 @@
   "checkNumber": "Введите, пожалуйста, число",
   "inputNumber": "Введите число",
   "resultForInput": "Результаты ввода",
-  "next": "Дальше",
+  "next": "Weiter",
   "mainTest": {
     "title": "Введите данные для оценки прибавки веса и роста.",
     "mainAttention": "Diese App ist nicht medizinisch, stellt keine Diagnosen und stellt keine medizinischen Ratschläge oder medizinischen Informationen zur Verfügung. \n Tests können nicht als absolute Empfehlung angesehen werden. Wenn Sie sich Sorgen über Unter- oder Übergewicht oder das Wachstum Ihres Kindes machen, wenden Sie sich IMMER an a Doktor!",
@@ -264,37 +273,37 @@
     }
   },
   "psychoTest": {
-    "header" : "Neuro&Physically test",
-    "title": "Оценка нервно физического развития ребенка.",
-    "titleOfPsycho": "Развитие ребенка",
-    "start": "Пожалуйста, ответьте на вопрос: \" Ваш ребенок:\"",
+    "header": "Neuro&Physisch Test",
+    "title": "Bewertung der neurophysikalischen Entwicklung des Kindes.",
+    "titleOfPsycho": "Entwicklung des Kindes",
+    "start": "Bitte beantworten Sie die Frage: \"Ihr Kind:\"",
     "question0": {
-      "title": "Введите, пожалуйста, пол ребенка.",
-      "help": "Пожалуйста, выберите мальчик или девочка"
+      "title": "Geben Sie das Geschlecht des Kindes ein",
+      "help": "Bitte wählen Sie Junge oder Mädchen"
     },
     "question1": {
-      "title": "Введите, пожалуйста, сколько сейчас месяцев ребенку (только до 12 месяцев включительно).",
-      "help": "Укажите количество полных месяцев. Если Ваш  ребенок в ближайшие дни прибавит следующий месяц, то рекомендуем ввести данный месяц.",
-      "warning": "Вы ввели количество месяцев больше 12. К сожалению, для детей старше тест не работает."
+      "title": "Bitte geben Sie an, wie viele Monate das Kind alt ist (nur bis einschließlich 12 Monate).",
+      "help": "Geben Sie die vollständigen Monate an. Wenn Ihr Kind in den nächsten Tagen einen weiteren Monat hinzufügt, empfehlen wir, diesen Monat einzugeben.",
+      "warning": "Sie haben eine Anzahl von Monaten über 12 eingegeben. Leider ist der Test für ältere Kinder nicht verfügbar."
     },
     "question2": {
-      "title": "Введите, пожалуйста, на какой неделе родился ребенок.",
-      "help": "Укажите количество недель.",
-      "warning": "Пожалуйста, проверьте данные. Диапазон для расчета от 30 до 42 недель."
+      "title": "Bitte geben Sie an, in welcher Woche das Kind geboren wurde.",
+      "help": "Geben Sie die Anzahl der Wochen an.",
+      "warning": "Bitte überprüfen Sie die Daten. Der Bereich für die Berechnung liegt zwischen 30 und 42 Wochen."
     },
     "question3": {
-      "title": "Введите, пожалуйста, вес (в ГРАММАХ ) ребенка в настоящее время.",
-      "help": "Достаточно ввести число до сотых граммов. (Пример - 6600 ГРАММ)",
-      "warning": "Возможно, Вы вводите в граммах. Пожалуйста, проверьте данные. Диапазон для расчета данного возраста"
+      "title": "Bitte geben Sie das aktuelle Gewicht des Kindes (in GRAMM) ein.",
+      "help": "Es reicht aus, die Zahl bis zu Hundertstelgramm einzugeben. (Beispiel - 6600 GRAMM)",
+      "warning": "Möglicherweise geben Sie in Gramm ein. Bitte überprüfen Sie die Daten. Der Bereich für die Berechnung dieses Alters"
     },
     "question4": {
-      "title": "Введите, пожалуйста, рост (в см) ребенка в настоящее время.",
-      "help": "Достаточно ввести только сантиметры.",
-      "warning": "Пожалуйста, проверьте данные. Диапазон для расчета данного возраста"
+      "title": "Bitte geben Sie die aktuelle Größe des Kindes (in cm) ein.",
+      "help": "Es reicht aus, nur die Zentimeter anzugeben.",
+      "warning": "Bitte überprüfen Sie die Daten. Der Bereich für die Berechnung dieses Alters"
     },
     "question5": {
-      "title": "Физические данные введены, двигаемся дальше.",
-      "help": "Для оценки нервно-психического развития нажмите кнопку дальше.",
+      "title": "Die physischen Daten wurden eingegeben, wir gehen weiter.",
+      "help": "Um die neuropsychische Entwicklung zu bewerten, klicken Sie auf die Schaltfläche Weiter.",
       "warning": ""
     },
     "quiz": {
@@ -453,34 +462,34 @@
     }
   },
   "quickTest": {
-    "header": "Быстрый тест",
-    "title": "Экспресс оценка физического развития ребенка от 0 до 3 лет.",
+    "header": "Schnelltest",
+    "title": "Express-Bewertung der\n körperlichen Entwicklung\n eines Kindes im Alter von 0 bis 3 Jahren.",
     "question1": {
-      "title": "Введите, пожалуйста, сколько сейчас месяцев ребенку (только до 36 месяцев включительно).",
-      "help": "Укажите количество полных месяцев. Если Ваш  ребенок в ближайшие дни прибавит следующий месяц, то рекомендуем ввести данный месяц.",
-      "warning": "Вы ввели количество месяцев больше 36. К сожалению, для детей старше тест не работает."
+      "title": "Bitte geben Sie das Alter des Kindes in Monaten ein (nur bis einschließlich 36 Monate).",
+      "help": "Geben Sie die vollständigen Monate an. Wenn Ihr Kind in den nächsten Tagen den nächsten Monat erreicht, empfehlen wir, diesen Monat einzugeben.",
+      "warning": "Sie haben mehr als 36 Monate eingegeben. Leider funktioniert der Test nicht für Kinder, die älter sind."
     },
     "question5": {
-      "title": "Поздравляем! Вы ввели все данные. Двигаемся дальше!",
-      "help": "Для получения результата теста нажмите правую кнопку",
-      "warning": "Вы ввели количество месяцев больше 36. К сожалению, для детей старше тест не работает."
+      "title": "Herzlichen Glückwunsch! Sie haben die Daten eingegeben!",
+      "help": "Um das Testergebnis zu erhalten, klicken Sie auf die rechte Schaltfläche",
+      "warning": "Sie haben mehr als 36 Monate eingegeben. Leider funktioniert der Test nicht für Kinder, die älter sind."
     },
-    "growth0": "Ваш малыш значительно НИЖЕ своих сверстников",
-    "growth1": "Ваш ребенок более низкого роста, чем большая часть его ровесников",
-    "growth2": "Ваша кроха имеет рост немного ниже среднего",
-    "growth3": "У вашего ребенка идеальный рост, он такой же как у большинства детей данного возраста",
-    "growth4": "У вашего малыша, рост немного выше среднего",
-    "growth5": "Ваша кроха имеет высокий рост, что несколько выше чем у детей его возраста",
-    "growth6": "Рост вашего малыша - очень высокий, он значительно опережает средние показатели роста сверстников",
-    "weight0": "Вес вашего ребенка очень маленький, что значительно меньше чем средний вес его сверстников",
-    "weight1": "Ваш малыш имеет маленький вес, что немного меньше веса большинства его ровесников",
-    "weight2": "Вес вашего малыша немного ниже среднего.",
-    "weight3": "Ваша кроха имеет идеальный средний вес",
-    "weight4": "Вес вашего ребенка - выше среднего",
-    "weight5": "Ваш малыш имеет больший вес, чем его сверстники",
-    "weight6": "Вес вашего ребенка - очень большой, он значительно превышает средний вес его ровесников"
-
+    "growth0": "Ihr Baby ist deutlich kleiner als seine Gleichaltrigen",
+    "growth1": "Ihr Kind ist kleiner als die meisten seiner Gleichaltrigen",
+    "growth2": "Ihr Baby ist etwas kleiner als der Durchschnitt",
+    "growth3": "Ihr Kind hat eine ideale Größe, die der Mehrheit der Kinder im gleichen Alter entspricht",
+    "growth4": "Ihr Baby ist etwas größer als der Durchschnitt",
+    "growth5": "Ihr Kind ist größer als seine Gleichaltrigen",
+    "growth6": "Die Größe Ihres Babys ist sehr hoch und übertrifft deutlich die Durchschnittswerte der Altersgenossen",
+    "weight0": "Das Gewicht Ihres Kindes ist sehr gering und liegt weit unter dem Durchschnitt der Gleichaltrigen",
+    "weight1": "Ihr Baby hat ein geringes Gewicht, das etwas unter dem Gewicht der meisten Gleichaltrigen liegt",
+    "weight2": "Das Gewicht Ihres Babys ist etwas unter dem Durchschnitt.",
+    "weight3": "Ihr Baby hat ein ideales Durchschnittsgewicht",
+    "weight4": "Das Gewicht Ihres Kindes liegt über dem Durchschnitt",
+    "weight5": "Ihr Baby wiegt mehr als seine Gleichaltrigen",
+    "weight6": "Das Gewicht Ihres Kindes ist sehr hoch und übertrifft deutlich das Durchschnittsgewicht der Gleichaltrigen"
   },
+
   "products":{
     "title": "Наши продукты",
     "apps": "Наши приложения",

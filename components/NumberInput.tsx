@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         width: '80%',
         alignItems: 'center',
+        textTransform: "uppercase"
     },
     buttonDisabled: {
         backgroundColor: '#BDBDBD', // Серый цвет для неактивной кнопки
@@ -95,11 +96,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         width: '80%',
         alignItems: 'center',
+        textTransform: "uppercase"
     },
     buttonText: {
         color: '#fff',
         fontSize: 16,
         fontWeight: '600',
+        textTransform: "uppercase"
     },
 });
 

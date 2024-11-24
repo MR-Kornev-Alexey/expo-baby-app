@@ -1,5 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import NextButton from './ui/NextButton';
+import {useTranslation} from "react-i18next";
+
 
 interface GenderSelectorProps {
     selectedGender: string | null;
@@ -15,7 +18,10 @@ const GenderSelector: React.FC<GenderSelectorProps> = ({
                                                            buttonState,
                                                            onNext,
                                                            nextButtonText,
+
                                                        }) => {
+
+    const {t} = useTranslation();
     return (
         <View style={styles.container}>
             <TouchableOpacity
@@ -25,7 +31,7 @@ const GenderSelector: React.FC<GenderSelectorProps> = ({
                     selectedGender === 'boy' && styles.buttonActive,
                 ]}
             >
-                <Text style={styles.buttonText}>Мальчик</Text>
+                <Text style={styles.buttonText}>{t('baby_boy')}</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => onGenderSelect('girl')}
@@ -34,20 +40,13 @@ const GenderSelector: React.FC<GenderSelectorProps> = ({
                     selectedGender === 'girl' && styles.buttonActive,
                 ]}
             >
-                <Text style={styles.buttonText}>Девочка</Text>
+                <Text style={styles.buttonText}>{t('baby_girl')}</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            <NextButton
                 onPress={onNext}
-                style={[
-                    styles.button,
-                    buttonState === 'enabled' ? styles.buttonNext : styles.buttonDisabled,
-                ]}
-                disabled={buttonState !== 'enabled'}
-            >
-                <Text style={buttonState === 'enabled' ? styles.nextText : styles.textDisabled}>
-                    {nextButtonText}
-                </Text>
-            </TouchableOpacity>
+                enabled={buttonState === 'enabled'}
+                text={nextButtonText}
+            />
         </View>
     );
 };
@@ -76,27 +75,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '600',
         textAlign: 'center',
-    },
-    buttonNext: {
-        backgroundColor: '#1b5e20',
-        marginTop: 12,
-        borderRadius: 5,
-    },
-    buttonDisabled: {
-        backgroundColor: '#BDBDBD',
-        marginTop: 12,
-        borderRadius: 5,
-    },
-    nextText: {
-        fontSize: 18,
-        color: '#fff',
-        textAlign: 'center',
-    },
-    textDisabled: {
-        fontSize: 18,
-        color: '#666',
-        textAlign: 'center',
-        textTransform: 'uppercase',
     },
 });
 

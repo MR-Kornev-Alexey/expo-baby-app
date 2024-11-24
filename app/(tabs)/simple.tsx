@@ -1,41 +1,45 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, useColorScheme, Dimensions, Image, Modal} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    useColorScheme,
+    Dimensions,
+    Image,
+    ScrollView
+} from 'react-native';
 import {useTranslation} from "react-i18next";
-import i18nSwith from "../../utils/locale/i18n";
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import {gStyle, images} from "@/constants";
 import NumberInput from "@/components/NumberInput";
 import GenderSelector from "@/components/GenderSelector";
-import CustomModal from "@/components/CustomModal"; // Importing MaterialCommunityIcons
+import CustomModal from "@/components/CustomModal";
+import ResultOfSimple from "@/components/ResultOfSimple"; // Importing MaterialCommunityIcons
+interface State {
+    currentPage: number;
+    gender: string;
+    old: number | null;
+    week: number | null;
+    weightNow: number | null;
+    growthNow: number | null;
+    isModalOpen: boolean;
+    isModalMainText: string;
+}
+
 
 export default function Simple() {
     const {t} = useTranslation();
-    const colorScheme = useColorScheme(); // Determine current theme (light/dark)
-    const [screenHeight, setScreenHeight] = useState(Dimensions.get('window').height);
-    const [state, setState] = useState({
+    const colorScheme = useColorScheme();
+    const screenHeight = useState(Dimensions.get('window').height);
+    const [state, setState] = useState<State>({
         currentPage: 0,
         gender: "",
         old: null,
         week: null,
         weightNow: null,
         growthNow: null,
-        showTheGender: true,
-        showTheInput: false,
-        isShowButtonTest: false,
-        isModalOpen: false, // Track modal state
-        isModalOpenUnit: false,
-        isShowButton: false,
-        isShowResult: false,
-        isModalTitle: '',
-        isModalMainText: '',
-        isModalMainTextIn: '',
-        number: null,
-        isResult: null,
-        activeIndex: -1,
-        resultAll: [],
-        flagWeight: null,
-        arrayData: []
+        isModalOpen: false,
+        isModalMainText: ""
     });
 
     const [buttonState, setButtonState] = useState<string>('disabled'); // Initialize button state
@@ -50,15 +54,21 @@ export default function Simple() {
 
 
     const isDarkTheme = colorScheme === 'dark'; // Check if dark theme is in use
-
-    const handleBackPress = () => {
-        // Handle the back button press (navigation functionality here)
+    const handleClearPress = () => {
+        setState(prevState => ({
+            ...prevState,
+            currentPage: 0,
+            gender: "",
+            old: null,
+            week: null,
+            weightNow: null,
+            growthNow: null,
+            isModalOpen: false,
+            isModalMainText: ""
+        }));
     };
 
-    const handleCartPress = () => {
-        // Handle the cart button press (functionality to be added later)
-    };
-    const handleGenderSelect = (gender: string) => {
+   const handleGenderSelect = (gender: string) => {
         setSelectedGender(gender);  // Устанавливаем выбранный пол
         setState(prevState => ({
             ...prevState,
@@ -82,7 +92,11 @@ export default function Simple() {
         }));
     };
     const openHelp = () => {
-        universalOpenModal(question[state.currentPage]?.help);
+        setState(prevState => ({
+            ...prevState,
+            isModalMainText: question[state.currentPage].help,
+            isModalOpen: true,
+        }));
     };
     const getNext = () => {
         if (selectedGender === null) {
@@ -173,26 +187,26 @@ export default function Simple() {
     ];
 
     return (
-        <View style={isDarkTheme ? styles.container_dark : styles.container_light}>
-            <View style={styles.header}>
-                <TouchableOpacity onPress={handleBackPress} style={styles.headerButton}>
-                    <MaterialCommunityIcons name="arrow-left-thin" size={24} color={isDarkTheme ? '#53f5cc' : '#000'}/>
+        <ScrollView style={isDarkTheme ? gStyle.container_dark : gStyle.container_light}>
+            <View style={gStyle.header}>
+                <TouchableOpacity onPress={openHelp} style={gStyle.headerButton}>
+                    <MaterialCommunityIcons name="help-circle-outline" size={28} color={isDarkTheme ? '#53f5cc' : '#000'}/>
                 </TouchableOpacity>
-                <Text style={styles.headerTitle}>{t('quickTest.title')}</Text>
-                <TouchableOpacity onPress={handleCartPress} style={styles.headerButton}>
-                    <MaterialCommunityIcons name="delete-outline" size={24} color={isDarkTheme ? '#53f5cc' : '#000'}/>
+                <Text
+                    style={[
+                        gStyle.headerTitle,
+                        { color: isDarkTheme ? '#FFFFFF' : '#000000' }
+                    ]}
+                >
+                    {t('quickTest.title')}
+                </Text>
+                <TouchableOpacity onPress={handleClearPress} style={gStyle.headerButton}>
+                    <MaterialCommunityIcons name="delete-outline" size={28} color={isDarkTheme ? '#53f5cc' : '#000'}/>
                 </TouchableOpacity>
             </View>
 
-            <View style={[gStyle.flexCenter, styles.helper]}>
-                <TouchableOpacity onPress={openHelp} style={styles.helpButton}>
-                    <MaterialCommunityIcons
-                        name="help-circle-outline"
-                        size={30}
-                        color={isDarkTheme ? '#53f5cc' : '#000'}
-                    />
-                </TouchableOpacity>
-                <Image
+            <View style={[gStyle.flexCenter, gStyle.helper]}>
+                 <Image
                     source={images.BabyHand}
                     style={[
                         gStyle.imgBabyTest,
@@ -200,17 +214,8 @@ export default function Simple() {
                     ]}
                 />
             </View>
-            <View style={[gStyle.flexCenter, styles.helper]}>
-                <Text style={styles.cardTitle}>
-                    gender {state.gender} <br/>
-                    old: {state.old} <br/>
-                    week: {state.week} <br/>
-                    weightNow: {state.weightNow}<br/>
-                    growthNow: {state.growthNow}
-                </Text>
-            </View>
-            <View style={styles.card}>
-                <Text style={styles.cardTitle}>
+               <View style={gStyle.card}>
+                <Text style={gStyle.cardTitle}>
                     {question[state.currentPage]?.question}
                 </Text>
 
@@ -231,6 +236,8 @@ export default function Simple() {
                 {state.currentPage === 4 &&
                     <NumberInput flag="growthNow" onNext={getNextNumber} nextButtonText={t('next')} over={160}
                                  under={36}/>}
+                {state.currentPage === 5 &&
+                    <ResultOfSimple  state={state}/>}
             </View>
             <CustomModal
                 visible={state.isModalOpen}
@@ -238,167 +245,7 @@ export default function Simple() {
                 message={state.isModalMainText}
                 closeButtonText="Close"
             />
-        </View>
+        </ScrollView>
     );
 }
 
-const styles = StyleSheet.create({
-    container_light: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#e8f5e9', // Light green background for light theme
-        padding: 20,
-        position: "relative",
-    },
-    container_dark: {
-        position: "relative",
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#222', // Dark background for dark theme
-        padding: 20,
-    },
-    header: {
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 16,
-        paddingTop: 10,
-        paddingBottom: 20,
-        position: "absolute",
-        top: 50,
-        left: 0
-    },
-    headerButton: {
-        padding: 10,
-    },
-    headerTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-        flex: 1,
-        textAlign: 'center',
-    },
-    card: {
-        backgroundColor: '#ffffff', // White card background
-        borderRadius: 10,
-        marginTop: 40,
-        padding: 20,
-        width: '90%',
-        shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.2,
-        shadowRadius: 3,
-        elevation: 5, // Shadow for Android
-    },
-    cardTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-        marginBottom: 20,
-        textAlign: 'center',
-    },
-    languageText: {
-        fontSize: 16,
-        color: '#1b5e20',
-        paddingVertical: 10,
-        textAlign: 'center',
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-    },
-    helper: {
-        position: "relative"
-    },
-    helpButton: {
-        padding: 10,
-        position: "absolute",
-        top: 0,
-        right: 60,
-        zIndex: 99999
-    },
-    // Modal styles
-    modalBackground: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
-    },
-    modalContainer: {
-        width: '80%',
-        backgroundColor: '#fff',
-        padding: 20,
-        borderRadius: 10,
-        alignItems: 'center',
-    },
-    modalTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 10,
-    },
-    modalText: {
-        fontSize: 16,
-        marginBottom: 20,
-    },
-    closeModalButton: {
-        backgroundColor: '#1b5e20',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 10,
-    },
-    closeModalText: {
-        color: '#fff',
-        fontSize: 16,
-    },
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        marginTop: 20,
-    },
-    fistList: {
-        flexDirection: 'column', // Вертикальная ориентация
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-    },
-    button: {
-        width: '80%', // Ширина кнопки фиксирована
-        paddingVertical: 15, // Высота кнопки
-        marginBottom: 10, // Отступ между кнопками
-        borderRadius: 5, // Округлые углы
-        backgroundColor: '#BDBDBD', // Цвет по умолчанию
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    buttonActive: {
-        backgroundColor: '#1b5e20',  // Зеленый цвет для активной кнопки
-    },
-    buttonText: {
-        color: '#fff',
-        fontSize: 18,  // Размер шрифта для всех кнопок
-        fontWeight: '600', // Средний вес шрифта
-        textAlign: 'center',
-    },
-    buttonNext: {
-        backgroundColor: '#1b5e20',  // Зеленый для кнопки "Next"
-        marginTop: 12,
-        borderRadius: 5,
-    },
-    buttonDisabled: {
-        backgroundColor: '#BDBDBD', // Серый для отключенной кнопки
-        marginTop: 12,
-        borderRadius: 5,
-    },
-    nextText: {
-        fontSize: 18,  // Единый размер шрифта для кнопки "Next"
-        color: '#fff',
-        textAlign: 'center',
-    },
-    textDisabled: {
-        fontSize: 18,  // Размер шрифта для неактивной кнопки
-        color: '#666',
-        textAlign: 'center',
-        textTransform: 'uppercase',
-    },
-});
