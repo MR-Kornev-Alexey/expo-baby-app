@@ -1,4 +1,4 @@
-import { Dimensions, Platform, PlatformOSType } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
 // Platform-specific checks
 const android = Platform.OS === 'android';

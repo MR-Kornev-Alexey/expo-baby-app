@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View, ViewStyle, TextStyle, useColorScheme } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ViewStyle, TextStyle, useColorScheme } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {AntDesign, MaterialCommunityIcons} from '@expo/vector-icons';
 

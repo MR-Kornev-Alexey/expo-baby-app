@@ -3,12 +3,11 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import {ThemedText} from '@/components/ThemedText';
 import {ThemedView} from '@/components/ThemedView';
 import {useTranslation} from 'react-i18next';
-import {Colors} from '@/constants/Colors';
 import {gStyle, images} from '@/constants';
 import SocialLinks from '@/components/SocialLinks';
 
 export default function HomeScreen() {
-    const {t, i18n}: any = useTranslation();
+    const {t}: any = useTranslation();
 
     return (
         <ParallaxScrollView
